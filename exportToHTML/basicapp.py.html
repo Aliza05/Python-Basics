@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>basicapp.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+.s5 { color: #cc7832;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+basicapp.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0"># print(&quot;Hello TechPal&quot;)</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s2">''' 
+<a name="l4"><span class="ln">4    </span></a>number = float(input(&quot;Enter a number: &quot;)) 
+<a name="l5"><span class="ln">5    </span></a>if number % 2 == 0: 
+<a name="l6"><span class="ln">6    </span></a>    print(&quot;Number is Even&quot;) 
+<a name="l7"><span class="ln">7    </span></a>else: 
+<a name="l8"><span class="ln">8    </span></a>    print(&quot;Number is Odd&quot;) 
+<a name="l9"><span class="ln">9    </span></a>'''</span>
+<a name="l10"><span class="ln">10   </span></a>
+<a name="l11"><span class="ln">11   </span></a><span class="s0">#User enters a number</span>
+<a name="l12"><span class="ln">12   </span></a><span class="s1">number = int(input(</span><span class="s3">&quot;Enter a number: &quot;</span><span class="s1">))</span>
+<a name="l13"><span class="ln">13   </span></a><span class="s1">number_range = range(</span><span class="s4">2</span><span class="s5">, </span><span class="s1">number)</span>
+<a name="l14"><span class="ln">14   </span></a><span class="s1">is_not_prime = </span><span class="s5">False</span>
+<a name="l15"><span class="ln">15   </span></a>
+<a name="l16"><span class="ln">16   </span></a><span class="s0">#To check if the number is not a prime</span>
+<a name="l17"><span class="ln">17   </span></a><span class="s5">for </span><span class="s1">num </span><span class="s5">in </span><span class="s1">number_range:</span>
+<a name="l18"><span class="ln">18   </span></a>    <span class="s5">if </span><span class="s1">number % num == </span><span class="s4">0</span><span class="s1">:</span>
+<a name="l19"><span class="ln">19   </span></a>        <span class="s1">is_not_prime = </span><span class="s5">True</span>
+<a name="l20"><span class="ln">20   </span></a>        <span class="s5">break</span>
+<a name="l21"><span class="ln">21   </span></a>
+<a name="l22"><span class="ln">22   </span></a><span class="s0">#if number is not a prime</span>
+<a name="l23"><span class="ln">23   </span></a><span class="s5">if </span><span class="s1">is_not_prime == </span><span class="s5">True</span><span class="s1">:</span>
+<a name="l24"><span class="ln">24   </span></a>    <span class="s1">print(</span><span class="s3">&quot;The number &quot; </span><span class="s1">+ str(number) + </span><span class="s3">&quot; is not a Prime.&quot;</span><span class="s1">)</span>
+<a name="l25"><span class="ln">25   </span></a>
+<a name="l26"><span class="ln">26   </span></a><span class="s0">#if number is prime</span>
+<a name="l27"><span class="ln">27   </span></a><span class="s5">else</span><span class="s1">:</span>
+<a name="l28"><span class="ln">28   </span></a>    <span class="s1">print(</span><span class="s3">&quot;The number &quot; </span><span class="s1">+ str(number) + </span><span class="s3">&quot; is a Prime.&quot;</span><span class="s1">)</span>
+<a name="l29"><span class="ln">29   </span></a>    <span class="s1">print(</span><span class="s3">&quot;Prime Numbers less than &quot; </span><span class="s1">+ str(number) + </span><span class="s3">&quot; are:&quot;</span><span class="s1">)</span>
+<a name="l30"><span class="ln">30   </span></a>
+<a name="l31"><span class="ln">31   </span></a>    <span class="s0">#Printing prime numbers using nested for loops</span>
+<a name="l32"><span class="ln">32   </span></a>    <span class="s5">for </span><span class="s1">num </span><span class="s5">in </span><span class="s1">range(</span><span class="s4">2</span><span class="s5">, </span><span class="s1">number):</span>
+<a name="l33"><span class="ln">33   </span></a>        <span class="s1">i = </span><span class="s4">2</span>
+<a name="l34"><span class="ln">34   </span></a>        <span class="s5">for </span><span class="s1">i </span><span class="s5">in </span><span class="s1">range(</span><span class="s4">2</span><span class="s5">, </span><span class="s1">num):</span>
+<a name="l35"><span class="ln">35   </span></a>
+<a name="l36"><span class="ln">36   </span></a>            <span class="s0">#if number is not a prime</span>
+<a name="l37"><span class="ln">37   </span></a>            <span class="s5">if </span><span class="s1">num % i == </span><span class="s4">0</span><span class="s1">:</span>
+<a name="l38"><span class="ln">38   </span></a>                <span class="s1">i = num</span>
+<a name="l39"><span class="ln">39   </span></a>                <span class="s5">break</span>
+<a name="l40"><span class="ln">40   </span></a>
+<a name="l41"><span class="ln">41   </span></a>        <span class="s0">#if number is a prime then print it</span>
+<a name="l42"><span class="ln">42   </span></a>        <span class="s5">if </span><span class="s1">i != num:</span>
+<a name="l43"><span class="ln">43   </span></a>            <span class="s1">print(num</span><span class="s5">, </span><span class="s1">end = </span><span class="s3">&quot; &quot;</span><span class="s1">)</span></pre>
+</body>
+</html>
